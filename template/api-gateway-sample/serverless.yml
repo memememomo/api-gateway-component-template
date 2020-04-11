@@ -1,0 +1,16 @@
+hello:
+  component: "@serverless/aws-lambda"
+  inputs:
+    code: ./
+    handler: index.hello
+    name: component-hello
+
+restApi:
+  component: "@serverless/aws-api-gateway"
+  inputs:
+    description: Serverless REST API
+    endpoints:
+      -
+        path: /hello
+        method: POST
+        function: ${hello.arn}

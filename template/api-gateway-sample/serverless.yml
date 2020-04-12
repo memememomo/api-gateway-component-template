@@ -1,6 +1,3 @@
-component: api-gateway-component-sample
-name: api-gateway-component-sample
-
 hello:
   component: "@serverless/aws-lambda"
   inputs:
